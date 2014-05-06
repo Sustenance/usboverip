@@ -2,5 +2,7 @@
 echo 'deb http://ftp.us.debian.org/debian wheezy main' >> /etc/apt/sources.list
 echo '# deb-src http://ftp.us.debian.org/debian wheezy main' >> /etc/apt/sources.list
 apt-get update
-apt-get install usbip -y
+apt-get install usbip -y --force-yes
+sed -i '$d' /etc/apt/sources.list
+sed -i '$d' /etc/apt/sources.list
 
